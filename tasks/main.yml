@@ -1,11 +1,11 @@
-#SPDX-License-Identifier: MIT-0
+# SPDX-License-Identifier: MIT-0
 ---
 # tasks file for first-role
 - name: Install apache httpd
   ansible.builtin.apt:
     name: apache2
     state: present
-    update_cache: yes
+    update_cache: true
 - name: Copy file with owner and permissions
   ansible.builtin.copy:
     src: files/index.html
